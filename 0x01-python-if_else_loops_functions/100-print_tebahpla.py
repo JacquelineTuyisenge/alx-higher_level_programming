@@ -1,4 +1,6 @@
-#!/usr/bin/env python3
-for i in range(ord('z'), ord('a') - 1, -1):
-    print("{:c}".format(i if (i - ord('a')) % 2 == 0 else i - 32), end="")
-print()
+#!/usr/bin/python3
+for a in range(122, 96, -1):
+    if a % 2 != 0:
+        a = a - 32
+    print("{}".format(chr(a)), end="")
+    
