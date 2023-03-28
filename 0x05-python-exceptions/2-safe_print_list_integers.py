@@ -1,13 +1,15 @@
-#!/usr/bin/pyton3
-# function that prints first 'x' element of a list and onl integer
+#!/usr/bin/python3
+# function that prints the first x elements,
+# of a list and only integers
+
 
 def safe_print_list_integers(my_list=[], x=0):
-    m = 0
+    ret = 0
     for i in range(0, x):
         try:
-            print("{:d}".format(my_list[i], end="")
-            m += 1
-        except (TypeErroe, ValueError):
+            print("{:d}".format(my_list[i]), end="")
+            ret += 1
+        except (ValueError, TypeError):
             continue
-            print("")
-            return (m)
+    print("")
+    return (ret)
